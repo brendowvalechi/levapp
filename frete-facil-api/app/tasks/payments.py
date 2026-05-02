@@ -2,7 +2,7 @@ from __future__ import annotations
 import asyncio
 import uuid
 
-from app.core.celery_app import celery_app
+from app.tasks.celery_app import celery_app
 from app.database import AsyncSessionLocal
 
 
