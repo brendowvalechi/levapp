@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "Levapp",
+    "slug": "levapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1D4ED8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.valechisystems.fretefacil",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização para encontrar transportadores próximos.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Precisamos da sua localização durante uma corrida ativa.",
+        "NSCameraUsageDescription": "Precisamos da câmera para fotos da carga e documentos.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para envio de imagens."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1D4ED8"
+      },
+      "package": "com.valechisystems.fretefacil",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/bb75413f-8154-44a3-8bbe-e4db39f4bf7a"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-updates",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "frete-facil",
+          "organization": "valechisystems"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permite rastrear sua localização durante corridas ativas."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#1D4ED8"
+        }
+      ]
+    ],
+    "scheme": "fretefacil",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "bb75413f-8154-44a3-8bbe-e4db39f4bf7a"
+      }
+    }
+  }
+}
